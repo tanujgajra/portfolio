@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y mandatory;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  color:#e4e4e7;
+  background:#0b0b0f;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:#111115;
+  z-index:100;
+}
+
+.logo{
+  font-weight:800;
+  color:#a855f7;
+}
+
+nav a{
+  margin-left:10px;
+  color:#9ca3af;
+  text-decoration:none;
+}
+nav a:hover{color:#fff}
+
+/* FOOTER (FIXED BOTTOM) */
+footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  text-align:center;
+  padding:10px;
+  background:#111115;
+  color:#a855f7;
+  font-weight:700;
+}
+
+/* SECTION FULL SCREEN */
+section{
+  height:100vh;
+  padding:100px 20px;
+  scroll-snap-align:start;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* HEADINGS */
+h2{
+  background:#a855f7;
+  color:#000;
+  padding:6px 12px;
+  display:inline-block;
+  border-radius:5px;
+  margin-bottom:15px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+}
+
+/* TEXT */
+p{
+  line-height:1.8;
+  max-width:700px;
+}
+
+/* CARDS */
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.card{
+  width:260px;
+  background:#111115;
+  border-radius:12px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px #a855f7;
+}
+
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.card-content{padding:10px}
+
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:6px 12px;
+  background:#a855f7;
+  color:#000;
+  border-radius:5px;
+}
+
+/* FORM */
+input,textarea,select{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  background:#18181b;
+  border:none;
+  color:#fff;
+  border-radius:5px;
+}
+
+button{
+  padding:10px;
+  background:#a855f7;
+  border:none;
+}
+
+/* SOCIAL */
+.social{
+  margin-top:20px;
+}
+.social a{
+  margin-right:15px;
+  color:#c084fc;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  section{padding:120px 15px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Portfolio</div>
+<nav>
+<a href="#hero">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<h2 id="typing"></h2>
+<p>CS Engineering Student | Building Real Projects</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About</h2>
+<p>
+I am a passionate Computer Science Engineering student who loves building real-world applications.
+I enjoy solving problems and continuously improving my skills.
+I believe in learning by doing and focus on practical implementation.
+My goal is to become a skilled developer and work on impactful projects.
+I stay consistent and keep improving every day.
+</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="container">
+<div class="card"><div class="card-content">C</div></div>
+<div class="card"><div class="card-content">C++</div></div>
+<div class="card"><div class="card-content">HTML</div></div>
+<div class="card"><div class="card-content">CSS</div></div>
+<div class="card"><div class="card-content">JavaScript</div></div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+<div class="container">
+
+<div class="card">
+<img id="hangman-slide" src="https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman1.jpeg">
+<div class="card-content">
+<h3>Hangman</h3>
+<a href="https://tanujgajra.github.io/Hang_OUT/" target="_blank" class="btn">Visit</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://raw.githubusercontent.com/tanujgajra/web/main/dayprediction1.jpeg">
+<div class="card-content">
+<h3>Day Predictor</h3>
+<a href="https://tanujgajra.github.io/web/" target="_blank" class="btn">Visit</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://raw.githubusercontent.com/tanujgajra/Nexora/main/comingsoon.jpg">
+<div class="card-content">
+<h3>Nexora</h3>
+<a href="#" class="btn">Coming Soon</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://raw.githubusercontent.com/tanujgajra/Air-Writing/main/comingsoon.jpg">
+<div class="card-content">
+<h3>Air Writing</h3>
+<a href="#" class="btn">Coming Soon</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+
+<form>
+<input placeholder="Name">
+<input placeholder="Email">
+
+<select id="type">
+<option value="">Select Type</option>
+<option value="school">School</option>
+<option value="college">College</option>
+<option value="worker">Worker</option>
+</select>
+
+<div id="extra"></div>
+
+<textarea placeholder="Message"></textarea>
+<button>Send</button>
+</form>
+
+<div class="social">
+<a href="https://github.com/tanujgajra">GitHub</a>
+<a href="https://www.linkedin.com">LinkedIn</a>
+<a href="https://instagram.com/09_tanuj_gajra">Instagram</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Tanuj
+</footer>
+
+<script>
+// typing
+let text="Hi, I'm Tanuj 👋";
+let i=0;
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,80);
+}}
+typing();
+
+// slideshow
+let images=[
+"https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman1.jpeg",
+"https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman2.jpeg",
+"https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman3.jpeg",
+"https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman4.jpeg",
+"https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman5.jpeg",
+"https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman6.jpeg",
+"https://raw.githubusercontent.com/tanujgajra/Hang_OUT/main/hangman7.jpeg"
+];
+
+let idx=0;
+let slide=document.getElementById("hangman-slide");
+setInterval(()=>{
+slide.src=images[idx];
+idx=(idx+1)%images.length;
+},2000);
+
+// form dynamic
+let type=document.getElementById("type");
+let extra=document.getElementById("extra");
+
+type.onchange=function(){
+if(this.value==="school"){
+extra.innerHTML=`<input placeholder="School Name"><input placeholder="Class"><input placeholder="Medium">`;
+}
+else if(this.value==="college"){
+extra.innerHTML=`<input placeholder="College Name"><input placeholder="Branch"><input placeholder="Year">`;
+}
+else if(this.value==="worker"){
+extra.innerHTML=`<input placeholder="Company Name"><input placeholder="Role">`;
+}
+else{extra.innerHTML="";}
+}
+
+/* ✅ ONLY FIXED PART - EMAIL SEND */
+document.querySelector("form").addEventListener("submit",function(e){
+e.preventDefault();
+
+let name=document.querySelector("input[placeholder='Name']").value;
+let email=document.querySelector("input[placeholder='Email']").value;
+let message=document.querySelector("textarea").value;
+
+let finalMsg =
+`Name: ${name}
+Email: ${email}
+Message: ${message}`;
+
+window.location.href =
+`mailto:tanujgajra09@gmail.com?subject=Portfolio Message&body=${encodeURIComponent(finalMsg)}`;
+});
+</script>
+
+</body>
+</html>
